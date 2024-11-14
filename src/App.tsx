@@ -41,9 +41,9 @@ const App: React.FC = () => {
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
-    const { name, value, type, checked } = e.target;
+    const { name, value, type } = e.target;
     if (type === 'checkbox') {
-      setForm({ ...form, [name]: checked });
+      setForm({ ...form, [name]: value});
     } else {
       setForm({ ...form, [name]: value });
     }
